@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conway-game-of-life"
+version = "1.0.0"
+description = "Conway's Game of Life: a sparse, infinite-grid engine with a terminal CLI, RLE support and an interactive browser version."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Shivam Agarwal", email = "agarwalshivam116@gmail.com" }]
+keywords = ["conway", "game-of-life", "cellular-automaton", "simulation"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Life",
+]
+
+[project.urls]
+Repository = "https://github.com/ShivamAgarwal-code/Conway-Game"
+
+[project.scripts]
+gameoflife = "gameoflife.__main__:main"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["gameoflife"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
